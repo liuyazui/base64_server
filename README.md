@@ -2,6 +2,10 @@
 
 一个简单高效的MCP服务器，专注于提供Base64编码和解码功能，支持文本和图片的Base64转换。
 
+<a href="https://glama.ai/mcp/servers/@liuyazui/base64_server">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/@liuyazui/base64_server/badge" alt="Base64 Server MCP server" />
+</a>
+
 ## 功能特点
 
 - 文本Base64编码和解码
