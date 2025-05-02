@@ -1,0 +1,98 @@
+[project]
+name = "base64_server"
+version = "1.0.0"
+description = "一个简单高效的MCP服务器，专注于提供Base64编码和解码功能，支持文本和图片的Base64转换。"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "MCP开发者", email = "liuyazui@buaa.edu.cn"}
+]
+maintainers = [
+    {name = "MCP开发者", email = "liuyazui@buaa.edu.cn"}
+]
+keywords = ["base64", "encoding", "mcp", "server"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Utilities",
+]
+
+# 核心依赖
+dependencies = [
+    "mcp[cli]>=1.0.0",
+    "pillow>=10.0.0",
+]
+
+# 可选依赖
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "isort>=5.12.0",
+    "mypy>=1.0.0",
+    "ruff>=0.0.270",
+]
+docs = [
+    "sphinx>=7.0.0",
+    "sphinx-rtd-theme>=1.2.0",
+]
+
+# 构建系统配置
+[build-system]
+requires = ["hatchling>=1.18.0"]
+build-backend = "hatchling.build"
+
+# 工具配置
+[tool.hatch.build.targets.wheel]
+packages = ["base64_server"]
+
+# 测试配置
+[tool.pytest.ini_options]
+testpaths = ["base64_server/tests"]
+python_files = "test_*.py"
+addopts = "--cov=base64_server"
+
+# 代码格式化配置
+[tool.black]
+line-length = 88
+target-version = ["py310", "py311", "py312"]
+include = '\.pyi?$'
+
+# 导入排序配置
+[tool.isort]
+profile = "black"
+line_length = 88
+
+# 类型检查配置
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+# Ruff配置（代码质量检查）
+[tool.ruff]
+line-length = 88
+target-version = "py310"
+select = ["E", "F", "B", "I"]
+ignore = []
+
+# 项目URLs
+[project.urls]
+"Homepage" = "https://github.com/liuyazui/base64_server"
+"Bug Tracker" = "https://github.com/liuyazui/base64_server/issues"
+"Documentation" = "https://base64-server.readthedocs.io/"
+"Source Code" = "https://github.com/liuyazui/base64_server"
+
+# 入口点配置
+[project.scripts]
+base64-server = "base64_server.cli:main"
