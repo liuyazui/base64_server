@@ -1,5 +1,7 @@
 # Base64编码解码MCP服务器
 
+[English Version](README_EN.md)
+
 一个简单高效的MCP服务器，专注于提供Base64编码和解码功能，支持文本和图片的Base64转换。
 
 ## 功能特点
@@ -43,6 +45,7 @@ uv run mcp dev base64_server.py
 ### 与MCP client集成
 
 1. 添加服务器配置：
+
    ```json
    {
      "mcpServers": {
@@ -95,8 +98,6 @@ messages = await client.get_prompt("encode_text_prompt", {"text": "Hello World"}
 ```
 
 ## 开发
-
-
 
 ## 许可证
 
