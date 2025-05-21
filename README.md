@@ -1,5 +1,6 @@
 # Base64编码解码MCP服务器
 
+[![smithery badge](https://smithery.ai/badge/@liuyazui/base64_server)](https://smithery.ai/server/@liuyazui/base64_server)
 [English Version](README_EN.md)
 
 一个简单高效的MCP服务器，专注于提供Base64编码和解码功能，支持文本和图片的Base64转换。
@@ -35,6 +36,14 @@ uv pip install -e .
 
 # 安装带开发依赖的包
 uv pip install -e ".[dev]"
+```
+
+### 安装Smithery
+
+使用Smithery为Claude桌面安装Base64编码解码MCP服务器，使用以下命令:
+
+```bash
+npx -y @smithery/cli install @liuyazui/base64_server --client claude
 ```
 
 ## 使用方法
