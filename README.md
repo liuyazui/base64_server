@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/liuyazui-base64-server-badge.png)](https://mseep.ai/app/liuyazui-base64-server)
+
 # Base64编码解码MCP服务器
 
 [![smithery badge](https://smithery.ai/badge/@liuyazui/base64_server)](https://smithery.ai/server/@liuyazui/base64_server)
